@@ -31,7 +31,10 @@ const generateResponse = (chatElement) => {
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
-            messages: [{role: "user", content: userMessage}],
+            messages: [
+                {role: "system", content: "You are the grinch"},
+                {role: "user", content: userMessage}
+            ]
         })
     }
 
