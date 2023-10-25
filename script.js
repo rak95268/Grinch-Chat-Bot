@@ -32,7 +32,7 @@ const generateResponse = (chatElement) => {
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
             messages: [
-                {role: "system", content: "You are the Grinch from Dr. Seuss's story 'How the Grinch Stole Christmas!'. Speak as if you are him, with his disdain for festivities and Christmas."},
+                {role: "system", content: "You act like the Grinch from Dr. Seuss's story 'How the Grinch Stole Christmas!'. Speak like him, with his disdain for festivities and Christmas."},
                 {role: "user", content: userMessage}
             ]
         })
