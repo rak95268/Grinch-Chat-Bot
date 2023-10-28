@@ -9,6 +9,13 @@
 body {
   background: grey;
 }
+#grinchchat {
+  text-align: center;
+  color: #b7be19;
+  font-size: 4em; /* You can adjust this value according to your preference */
+  margin-bottom: 20px;
+  margin-top: 30px; /* Adding some space below the heading */
+}
 .chatbot-toggler {
   position: fixed;
   bottom: 30px;
@@ -103,17 +110,12 @@ header h2 {
   margin: 20px 0;
   justify-content: flex-end;
 }
-.chatbox .incoming span {
-  width: 32px;
-  height: 32px;
-  color: #fff;
-  cursor: default;
-  text-align: center;
-  line-height: 32px;
+.chatbox .incoming img {
+  width: 32px; /* Adjust as needed */
+  height: 32px; /* Adjust as needed */
   align-self: flex-end;
-  background: #724ae8;
-  border-radius: 4px;
   margin: 0 10px 7px 0;
+  border-radius: 4px; /* Optional: for rounded corners */
 }
 .chatbox .chat p {
   white-space: pre-wrap;
@@ -122,7 +124,7 @@ header h2 {
   max-width: 75%;
   color: #fff;
   font-size: 0.95rem;
-  background: #724ae8;
+  background: #b7be19;
 }
 .chatbox .incoming p {
   border-radius: 10px 10px 10px 0;
@@ -157,7 +159,7 @@ header h2 {
 }
 .chat-input span {
   align-self: flex-end;
-  color: #724ae8;
+  color: #b7be19;
   cursor: pointer;
   height: 55px;
   display: flex;
