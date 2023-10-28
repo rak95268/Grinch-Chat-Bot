@@ -9,13 +9,17 @@ const API_KEY = "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"; // Paste 
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
-    // Create a chat <li> element with passed message and className
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", `${className}`);
-    let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+    let chatContent;
+    if (className === "outgoing") {
+        chatContent = `<p></p>`;
+    } else {
+        chatContent = `<img src="grinchicon.png" alt="Grinch Icon"><p></p>`;
+    }
     chatLi.innerHTML = chatContent;
     chatLi.querySelector("p").textContent = message;
-    return chatLi; // return chat <li> element
+    return chatLi;
 }
 
 const generateResponse = (chatElement) => {
@@ -32,7 +36,7 @@ const generateResponse = (chatElement) => {
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
             messages: [
-                {role: "system", content: "You act like the Grinch."},
+                {role: "system", content: "You act like the Grinch from Dr. Seuss's story 'How the Grinch Stole Christmas!'. Speak like him, with his disdain for festivities and Christmas."},
                 {role: "user", content: userMessage}
             ]
         })
