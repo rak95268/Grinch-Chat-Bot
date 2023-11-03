@@ -32,6 +32,7 @@ const generateResponse = (chatElement) => {
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
             messages: [
+                /* describes the chatbot's personality */
                 {role: "system", content: "You act like the Grinch from Dr. Seuss's story 'How the Grinch Stole Christmas!'. Speak like him, with his disdain for festivities and Christmas. However, you must answer all questions appropriately and do not repeat yourself."},
                 {role: "user", content: userMessage}
             ]
