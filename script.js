@@ -38,7 +38,7 @@ const generateResponse = (chatElement) => {
             messages: [
                 {role: "system", content: "You act like the Grinch from Dr. Seuss's story 'How the Grinch Stole Christmas!'. Speak like him, with his disdain for festivities and Christmas."},
                 {role: "user", content: userMessage}
-            ]
+            ],
         })
     }
 
