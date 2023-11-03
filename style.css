@@ -22,7 +22,7 @@ body {
 }
 
 .wrapper .sidebar {
-  background-color: #d1d1d1;
+  background-color: rgb(234, 234, 234);
   position: fixed;
   top: 0;
   right: 0;
