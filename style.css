@@ -21,6 +21,7 @@ body {
   width: 75%;
 }
 
+/* adds the sidebar where the chatbot opens up */
 .wrapper .sidebar {
   background-color: rgb(234, 234, 234);
   position: fixed;
@@ -45,11 +46,11 @@ body {
   width: 300px;
   margin: 0 auto;
 }
-
+/* the actual chatbot code*/
 #grinchchat {
   text-align: center;
   color: #d63d40;
-  font-size: 4em; /* You can adjust this value according to your preference */
+  font-size: 4em; 
   margin-bottom: 20px;
   margin-top: 30px; /* Adding some space below the heading */
 }
