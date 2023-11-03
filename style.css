@@ -8,11 +8,47 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: grey;
+  background: rgb(234, 234, 234);
+  /* background-image: url(res/backgroundToDo.png); */
 }
+
+.wrapper {
+  margin-top: 4%;
+  margin-left: 2%;
+}
+
+.wrapper .backgroundIMG img {
+  width: 75%;
+}
+
+.wrapper .sidebar {
+  background-color: #d1d1d1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 22.5%;
+  height: 100%;
+  padding: 20px 0;
+  transition: all 0.5s ease;
+  
+}
+.wrapper .sidebar .chatPromt{
+  position: fixed;
+  bottom: 65px;
+  right: 10px;
+  text-align: center;
+  transform: rotate(-22deg);
+  
+}
+.wrapper .sidebar .chatPromt img{
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+}
+
 #grinchchat {
   text-align: center;
-  color: #b7be19;
+  color: #d63d40;
   font-size: 4em; /* You can adjust this value according to your preference */
   margin-bottom: 20px;
   margin-top: 30px; /* Adding some space below the heading */
@@ -30,7 +66,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #b7be19;
+  background: #d63d40;
   transition: all 0.2s ease;
 }
 body.show-chatbot .chatbot-toggler {
@@ -72,7 +108,7 @@ body.show-chatbot .chatbot {
   padding: 16px 0;
   position: relative;
   text-align: center;
-  color: #b7be19;
+  color: #55a200;
   background: #fff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -125,7 +161,7 @@ header h2 {
   max-width: 75%;
   color: #fff;
   font-size: 0.95rem;
-  background: #b7be19;
+  background: #55a200;
 }
 .chatbox .incoming p {
   border-radius: 10px 10px 10px 0;
@@ -160,7 +196,7 @@ header h2 {
 }
 .chat-input span {
   align-self: flex-end;
-  color: #b7be19;
+  color: #55a200;
   cursor: pointer;
   height: 55px;
   display: flex;
