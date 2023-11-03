@@ -38,7 +38,7 @@ const generateResponse = (chatElement) => {
             messages: [
                 {role: "system", content: "You act like the Grinch from Dr. Seuss's story 'How the Grinch Stole Christmas!'. Speak like him, with his disdain for festivities and Christmas."},
                 {role: "user", content: userMessage}
-            ],
+            ]
         })
     }
 
@@ -65,7 +65,7 @@ const handleChat = () => {
     
     setTimeout(() => {
         // Display "Thinking..." message while waiting for the response
-        const incomingChatLi = createChatLi("Stealing...", "incoming");
+        const incomingChatLi = createChatLi("Thinking...", "incoming");
         chatbox.appendChild(incomingChatLi);
         chatbox.scrollTo(0, chatbox.scrollHeight);
         generateResponse(incomingChatLi);
