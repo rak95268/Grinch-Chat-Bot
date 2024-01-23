@@ -1,3 +1,6 @@
+require('dotenv').config();
+const API_KEY = process.env.API_KEY;
+
 // Reference to the chatbot toggle button
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 // Reference to the close button inside the chatbot
@@ -11,8 +14,6 @@ const sendChatBtn = document.querySelector(".chat-input span");
 
 // Variable to store user's message
 let userMessage = null;
-// API key for the OpenAI service
-const API_KEY = "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";
 // Store the initial height of the chat input for resetting later
 const inputInitHeight = chatInput.scrollHeight;
 
