@@ -63,11 +63,12 @@ const generateResponse = (chatElement) => {
     .then(data => {
         messageElement.textContent = data.choices[0].message.content.trim();
     })
-    .catch(error => {
-        console.error('Fetch Error:', error);
-        messageElement.classList.add("error");
-        messageElement.textContent = "Oops! Something went wrong. Please try again.";
-    });
+  .catch(error => {
+    console.error('Fetch Error:', error);
+    messageElement.classList.add("error");
+    messageElement.textContent = `Fetch Error: ${error.message}`;
+});
+;
         .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 };
 
