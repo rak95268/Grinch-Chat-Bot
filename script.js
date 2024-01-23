@@ -53,15 +53,21 @@ const generateResponse = (chatElement) => {
     };
 
     // Send POST request to API, get response, and update the chat with the response
-    fetch(API_URL, requestOptions)
-        .then(res => res.json())
-        .then(data => {
-            messageElement.textContent = data.choices[0].message.content.trim();
-        })
-        .catch(() => {
-            messageElement.classList.add("error");
-            messageElement.textContent = "Oops! Something went wrong. Please try again.";
-        })
+  fetch(API_URL, requestOptions)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        messageElement.textContent = data.choices[0].message.content.trim();
+    })
+    .catch(error => {
+        console.error('Fetch Error:', error);
+        messageElement.classList.add("error");
+        messageElement.textContent = "Oops! Something went wrong. Please try again.";
+    });
         .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 };
 
